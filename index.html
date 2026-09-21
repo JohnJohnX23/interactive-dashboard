@@ -39,6 +39,35 @@
             <p style="color: black;" id="goal-message"></p>
         }>
     </div>
+    <div class="col" ID="metric-converter">
+        <label for="number">Number:</label><br>
+        <input type="number" id="number" name="number"><br>
+        <label for="unit1">From Unit:</label><br>
+        <select id="unit1" name="unit1">
+            <option value="inch">Inch</option>
+            <option value="foot">Foot</option>
+            <option value="yard">Yard</option>
+            <option value="mile">Mile</option>
+            <option value="centimeter">Centimeter</option>
+            <option value="meter">Meter</option>
+            <option value="kilometer">Kilometer</option>
+        </select><br>
+        <label for="unit2">To Unit:</label><br>
+        <select id="unit2" name="unit2">
+            <option value="inch">Inch</option>
+            <option value="foot">Foot</option>
+            <option value="yard">Yard</option>
+            <option value="mile">Mile</option>
+            <option value="centimeter">Centimeter</option>
+            <option value="meter">Meter</option>
+            <option value="kilometer">Kilometer</option>
+        </select><br>
+        <button id="convert-btn" type="button">Convert</button>
+        <p>
+            <span id="convert-result"></span>
+            <script src="metric-converter.js" defer></script>
+        </p>
+    </div>
 </div>
     </p>
 </body>
