@@ -1,4 +1,4 @@
-let number = parseFloat(prompt("Enter the number:"));
+/*let number = parseFloat(prompt("Enter the number:"));
 let UNIT1 = prompt("Enter the current unit:");
 let UNIT2 = prompt("Enter the conversion unit:");
 let Result;
@@ -23,4 +23,4 @@ if (UNIT1 === "inch") {
     Result = number * 0.62;
 }
 
-element.addEventListener("click", function() {alert(Result + " " + UNIT2)});
+element.addEventListener("click", function() {alert(Result + " " + UNIT2)}); */

@@ -27,48 +27,62 @@
             class:"col";
             id:"weekley-task";
             <script src="task-manager.js"></script>
-            <form>
+            <h2 class="heading">Weekly Task</h2>
                 <label for="Name">Name:</label><br>
                 <input type="text" id="Name" name="Name"><br>
                 <label for="Goal">Daily Task Goal:</label><br>
                 <input type="number" id="Goal" name="Goal"><br>
                 <label for="Bonus">Weekly Bonus:</label><br>
                 <input type="number" id="Bonus" name="Bonus"><br>
-                <button id="goal-btn" type="button">Set Goals</button>
+                <button onclick="weeklyGoal()" >Set Goals</button>
+                
             </form>
             <p style="color: black;" id="goal-message"></p>
-        }>
-    </div>
-    <div class="col" ID="metric-converter">
-        <label for="number">Number:</label><br>
-        <input type="number" id="number" name="number"><br>
-        <label for="unit1">From Unit:</label><br>
-        <select id="unit1" name="unit1">
-            <option value="inch">Inch</option>
-            <option value="foot">Foot</option>
-            <option value="yard">Yard</option>
-            <option value="mile">Mile</option>
-            <option value="centimeter">Centimeter</option>
-            <option value="meter">Meter</option>
-            <option value="kilometer">Kilometer</option>
-        </select><br>
-        <label for="unit2">To Unit:</label><br>
-        <select id="unit2" name="unit2">
-            <option value="inch">Inch</option>
-            <option value="foot">Foot</option>
-            <option value="yard">Yard</option>
-            <option value="mile">Mile</option>
-            <option value="centimeter">Centimeter</option>
-            <option value="meter">Meter</option>
-            <option value="kilometer">Kilometer</option>
-        </select><br>
-        <button id="convert-btn" type="button">Convert</button>
-        <p>
-            <span id="convert-result"></span>
+
+        </div>
+        <div class="col" ID="metric-converter">
+            <h2 class="heading">Metric Converter</h2>
+            <label for="number">Number:</label><br>
+            <input type="number" id="number" name="number"><br>
+            <label for="unit1">From Unit:</label><br>
+            <select id="unit1" name="unit1">
+                <option value="inch">Inch</option>
+                <option value="foot">Foot</option>
+                <option value="yard">Yard</option>
+                <option value="mile">Mile</option>
+                <option value="centimeter">Centimeter</option>
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
+            </select><br>
+            <label for="unit2">To Unit:</label><br>
+            <select id="unit2" name="unit2">
+                <option value="inch">Inch</option>
+                <option value="foot">Foot</option>
+                <option value="yard">Yard</option>
+                <option value="mile">Mile</option>
+                <option value="centimeter">Centimeter</option>
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
+            </select><br>
+            <button id="convert-btn" type="button">Convert</button>
+            <p>
+                <span id="convert-result"></span>
+            </p>
             <script src="metric-converter.js" defer></script>
-        </p>
-    </div>
-</div>
-    </p>
-</body>
-</html>
+            </p>
+    <div class="col" id="magic-eight-ball">
+     <script src="magic-eight-ball.js" defer></script>﻿
+     <link rel="stylesheet" href="css/magic-eight-ball.css">
+     <h2 class="heading">Magic Eight Ball</h2>
+      <form>
+       <p>Type a yes/no question below, then click on the Eight Ball below to get your answer!</p>
+       <input id="question" name="question" size="80">
+       <button onclick="displayAnswer()">Submit</button>
+       <div id="magicEightBall">
+        <div id="circle"></div>
+        <img id="ball" src="img\magic-eight-ball.png"/>
+       </div>
+       <button id="reset" name="reset" type="reset">Ask another question</button>
+      </form>
+      <br>
+   </div>
