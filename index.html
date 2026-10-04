@@ -34,8 +34,15 @@
                 <input type="number" id="Goal" name="Goal"><br>
                 <label for="Bonus">Weekly Bonus:</label><br>
                 <input type="number" id="Bonus" name="Bonus"><br>
-                <button onclick="weeklyGoal()" >Set Goals</button>
-                
+                <button onclick="weeklyGoal()" >Set Goals</button><br><br><br>
+                <div id="task-list">
+                    <h3>Weekly Task List</h3>
+                    <p>Enter a task below to manage your goals</p>
+                    <form id="task-name">
+                        <input type="text" id="task-input" name="Enter task:" >
+                        <button type="button" onclick="AddTask()">Add Task</button>
+                    </form>
+                </div>
             </form>
             <p style="color: black;" id="goal-message"></p>
 
