@@ -5,6 +5,7 @@
 - [ ] Integrate a task list with array storage.
 - [ ] add JavaScript logic for a live clock
 - [x] add a weekly task goal calculator
+- [x] add a magic 8 ball game
 
 ## Weekly Task Goals
 Weekly task goals calculates daily goals by the days in the work week and adds bonus task to that total as well.
@@ -40,3 +41,6 @@ IF UNIT1 = "kilometer"
 	SET Result = number * .62
 
 Display Result, UNIT2
+
+## Magic 8 Ball
+You ask a yes or no question and submit it. The game returns a random answer to that question.
