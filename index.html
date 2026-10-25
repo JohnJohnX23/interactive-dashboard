@@ -34,8 +34,15 @@
                 <input type="number" id="Goal" name="Goal"><br>
                 <label for="Bonus">Weekly Bonus:</label><br>
                 <input type="number" id="Bonus" name="Bonus"><br>
-                <button onclick="weeklyGoal()" >Set Goals</button>
-                
+                <button onclick="weeklyGoal()" >Set Goals</button><br><br><br>
+                <div id="task-list">
+                    <h3>Weekly Task List</h3>
+                    <p>Enter a task below to manage your goals</p>
+                    <form id="task-name">
+                        <input type="text" id="task-input" name="Enter task:" >
+                        <button type="button" onclick="AddTask()">Add Task</button>
+                    </form>
+                </div>
             </form>
             <p style="color: black;" id="goal-message"></p>
 
@@ -84,4 +91,51 @@
        <button id="reset" name="reset" type="reset">Ask another question</button>
       </form>
       <br>
+      <br>
+      <br>
+
+      <div class="col" id="Task Manager">
+        <h1>Task Manager</h1>
+        <br><br>
+
+        <form action="task-manager-obj.js" method="post">
+          <input type="text" id="task-input" name="task" placeholder="Enter a new task...">
+          <br><br>
+
+          <label for="priority">Priority:</label>
+          <select id="priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <br><br>
+          <input type="checkbox" id="important" name="important" value="important">
+          <label for="important">Important</label>
+          <br>
+
+          <button type="button" id="addTask" >Add Task</button>
+          <button type="button" id="deleteList" >Delete list</button>
+
+        </form>
+        <script>
+            document.getElementById("addTask").addEventListener("click", addTask);
+            document.getElementById("deleteList").addEventListener("click", deleteTasks);
+            let task = {
+                name: document.getElementById("task-input").innerText,
+                priority: document.getElementById("priority").value,
+                important: document.getElementById("important").checked
+            };
+            console.log(task);
+            function addTask() {
+                alert("Task added successfully!");
+                console.log(Task);
+            }
+
+            function deleteTasks() {
+                alert("Task list deleted successfully!");
+                console.log(Task);
+            }
+            console.log("Task manager initialized.");
+        </script>
+      </div>
    </div>
