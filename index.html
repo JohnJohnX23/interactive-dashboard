@@ -115,27 +115,17 @@
 
           <button type="button" id="addTask" >Add Task</button>
           <button type="button" id="deleteList" >Delete list</button>
-
+          <br><br>
         </form>
-        <script>
-            document.getElementById("addTask").addEventListener("click", addTask);
-            document.getElementById("deleteList").addEventListener("click", deleteTasks);
-            let task = {
-                name: document.getElementById("task-input").innerText,
-                priority: document.getElementById("priority").value,
-                important: document.getElementById("important").checked
-            };
-            console.log(task);
-            function addTask() {
-                alert("Task added successfully!");
-                console.log(Task);
-            }
+        
 
-            function deleteTasks() {
-                alert("Task list deleted successfully!");
-                console.log(Task);
-            }
-            console.log("Task manager initialized.");
-        </script>
-      </div>
+        <div class="col" id="digital-clock"></div>
+        <link rel="stylesheet" href="css/digital-clock.css">
+        <h3> Current Time & Date</h3>
+        <div id="clock-face"></div>
+        <p id="calendar-date"></p>
+
+        <script src="digital-clock.js" defer></script>
+
+        </div>
    </div>
